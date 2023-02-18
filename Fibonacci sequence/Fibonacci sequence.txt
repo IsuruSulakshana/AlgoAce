@@ -1,0 +1,12 @@
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.
+So, the first few numbers in the Fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+To find the 8th number in the Fibonacci sequence, we can use the formula for the nth term of the sequence, which is:
+
+fib(n) = fib(n-1) + fib(n-2)
+
+fib(8) = fib(7) + fib(6)
+       = (fib(6) + fib(5)) + (fib(5) + fib(4))
+       = ((fib(5) + fib(4)) + (fib(4) + fib(3))) + ((fib(4) + fib(3)) + (fib(3) + fib(2)))
+       = (((fib(4) + fib(3)) + (fib(3) + fib(2))) + ((fib(3) + fib(2)) + (fib(2) + fib(1)))) + (((fib(3) + fib(2)) + (fib(2) + fib(1))) + ((fib(2) + fib(1)) + (fib(1) + fib(0))))
+       = (((3 + 2) + (2 + 1)) + ((2 + 1) + (1 + 1))) + (((2 + 1) + (1 + 1)) + ((1 + 1) + (1 + 0)))
+       = 21
