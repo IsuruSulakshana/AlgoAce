@@ -2,10 +2,11 @@
 #include<vector>
 
 using namespace std;
-
+int hourglassSum(vector<vector<int>> arr);
 void display(vector<int>);
 void rVector(vector<vector<int>>);
 void tVector(vector<vector<int>>);
+void cVector(vector<vector<int>>);
 int main(){
     vector<vector<int>> arr = {
         {1,2,3,1,2,1},
@@ -15,6 +16,10 @@ int main(){
         {1,4,2,1,2,1},
         {2,2,0,4,1,1}
     };
+    hourglassSum(arr);
+}
+
+int hourglassSum(vector<vector<int>> arr) {
     for (int i = 0; i < 4; i++)
     {
         vector<vector<int>> temp;
@@ -48,12 +53,22 @@ void tVector(vector<vector<int>> b){
         }
         tVector.push_back(temp);
     }
-    rVector(tVector);
+    cVector(tVector);
     tVector.clear();
 }
 
 void cVector(vector<vector<int>> c){
-    
+    for (int i = 0; i < 4; i++)
+    {
+        vector<vector<int>> temp;
+        for ( int j = i; j < i+3; j++)
+        {
+            temp.push_back(c[j]);
+        }
+        rVector(temp);
+        cout<<" "<<endl;
+        temp.clear();
+    }
 }
 
 void rVector(vector<vector<int>> b){
