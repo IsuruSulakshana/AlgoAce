@@ -60,14 +60,13 @@ void tVector(vector<vector<int>> b){
 void cVector(vector<vector<int>> c){
     for (int i = 0; i < 4; i++)
     {
-        vector<vector<int>> temp;
+        vector<vector<int>> tem;
         for ( int j = i; j < i+3; j++)
         {
-            temp.push_back(c[j]);
+            tem.push_back(c[j]);
         }
-        rVector(temp);
         cout<<" "<<endl;
-        temp.clear();
+        tem.clear();
     }
 }
 
