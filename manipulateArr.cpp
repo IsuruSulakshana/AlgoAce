@@ -16,7 +16,16 @@ vector<string> split(const string &);
  */
 
 long arrayManipulation(int n, vector<vector<int>> queries) {
-
+    vector<long> temp(n+1, 0);
+    for (int i = 0; i < queries.size(); i++) {
+        int a = queries[i][0];
+        int b = queries[i][1];
+        int k = queries[i][2];
+        temp[a] += k;
+        if (b+1 <= n) temp[b+1] -= k;
+    }
+    long max = *max_element(temp.begin(), temp.end());
+    return max;
 }
 
 int main()
